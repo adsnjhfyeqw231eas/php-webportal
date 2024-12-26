@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="hi">
-<head>
-  <meta charset="UTF-8">
-  <title>рдирр</title>
-</head>
-<body>
-<footer class="py-sm-5">
+	<footer class="py-sm-5">
 		<div class="container">
 			<div class="row py-5">
 				<!-- footer grid1 -->
@@ -109,5 +102,3 @@
 		</div>
 		<!-- //footer container -->
 	</footer>
-</body>
-</html>
