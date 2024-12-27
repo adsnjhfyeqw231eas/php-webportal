@@ -1,4 +1,3 @@
-<?php include("db/db.php");?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -133,32 +132,7 @@
  <input type="submit" name="submit" value="submit">
  </form>
 
-
     </div>
-    <div class="container">
- <div class="row" style="background-color:#00806e; color: white; font-weight: bold; padding-bottom: 15px; margin-top: 19px; margin-bottom: 30px;">
-   <?php
-  $query="select *from feedback_ins"; 
-$run = mysqli_query($con,$query);
-    
-    while ($row= mysqli_fetch_array($run)){
-        
-        $id =$row['id'];
-        $name=$row['name'];     
-        $message=$row['message']; 
-        echo "<pre>";
-        print_r ($row);
-        echo "</pre>";
-    ?> 
-    <table cellpadding="2" cellspacing="2" border="1px solid red;">
-        <tr><th>Feedback</th><th>Name</th></tr>
-        <tr><td><p style="color: white;"><?php echo $message; ?></p></td><td><p style="color: red; font-weight: normal;"><b><?php echo $name; ?></b></p></td></tr>
-    </table> 
-     
-     
-     <?php }?>
- </div>
-</div>
 <!-- footer -->
 	<?php include('includes/footer.php'); ?>
 	<!-- //footer -->
@@ -233,45 +207,3 @@ $run = mysqli_query($con,$query);
     <script src="js/bootstrap.js"></script>
 </body>
 </html>
-<?php
-if(isset($_POST['submit'])){
-    $name= $_POST['name'];
-    
-    $message= $_POST['message'];
-    
-    
-    if ($name=="" or $message==""){
-        
-        
-        
-        echo"<script language='javascript'>alert('Please Fill All The Fields!')</script>";
-        exit();
-    }
-    
-    {
-        
-    
-    
-    }
-    
-    
-    $insert_images ="insert into feedback_ins(name,message) values ('$name','$message')";
-    
-    
-        
-        $run_images = mysqli_query($con, $insert_images);
-        if($run_images){
-            
-            
-            echo"<script language='javascript'>alert(' successfilly Changed')</script>";
-        }
-        
-        
-    
-    
-    
-    
-}
-
-
-?>
